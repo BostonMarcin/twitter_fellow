@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "twitter-fellow": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with", "fastmcp",
+        "--with", "httpx",
+        "--with", "python-dotenv",
+        "fastmcp",
+        "run",
+        "server.py"
+      ]
+    }
+  }
+}
