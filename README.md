@@ -25,8 +25,9 @@ Twitter Fellow is a lightweight [MCP (Model Context Protocol)](https://modelcont
 git clone git@github.com:BostonMarcin/twitter_fellow.git
 cd twitter_fellow
 
-# Create your .env file
-echo 'TWITTER_BEARER_TOKEN=your_token_here' > .env
+# Copy the example config and add your token
+cp .mcp.json.example .mcp.json
+# Edit .mcp.json and replace "your_bearer_token_here" with your actual token
 ```
 
 ### 3. Add accounts to follow
@@ -56,8 +57,8 @@ The `.mcp.json` is already configured. Just open the project in Claude Code and 
 twitter_fellow/
 ├── 🐍 server.py          # MCP server (FastMCP + httpx)
 ├── 📋 follows.txt         # Accounts to follow
-├── ⚙️ .mcp.json           # MCP server config for Claude Code
-├── 🔒 .env                # Your API token (gitignored)
+├── ⚙️ .mcp.json.example   # Example MCP config (copy to .mcp.json)
+├── 🔒 .mcp.json           # Your MCP config with token (gitignored)
 └── 📝 .gitignore
 ```
 

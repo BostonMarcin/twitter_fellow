@@ -5,12 +5,9 @@ import os
 from pathlib import Path
 
 import httpx
-from dotenv import load_dotenv
 from fastmcp import FastMCP
 
-load_dotenv()
-
-BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN", "")
+BEARER_TOKEN = os.environ.get("TWITTER_BEARER_TOKEN", "")
 BASE_URL = "https://api.x.com/2"
 CACHE_FILE = Path(__file__).parent / ".cache.json"
 FOLLOWS_FILE = Path(__file__).parent / "follows.txt"
